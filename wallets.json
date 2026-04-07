@@ -1,0 +1,802 @@
+[
+    {
+        "agentName": "PawBot",
+        "address": "0xF87AF27392feb2a69750C9eAaD5c8356eF2eDb92",
+        "privateKey": "0x9144651c2cb0606c5198c0d241bccf745bb69bc79a08e915b0ceeee05acfe753",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_626acc494957f47327f66aea76bd9db30c45ed981ca2937c6b4f2f836939617c",
+        "lastDeployedAt": 1775596501824
+    },
+    {
+        "agentName": "RibbitBot",
+        "address": "0xC9296F38aa54495c9E81DeB89F72725AE8939e65",
+        "privateKey": "0x6467d7c5858553a92a587578d5c27d07e3e69b51b3194fbf95ece253b90137db",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_6f62e189760781d089670ac7f61496ac43f332cefc3bfea1a04b8bbbd0d1166e",
+        "lastDeployedAt": 1775597022603
+    },
+    {
+        "agentName": "MeowBot",
+        "address": "0x74622db0E09a80bff1224fbE66249e91e8897889",
+        "privateKey": "0xfc9e7011dd68048ccb207ec97afd87d3daf015297808e6322d457847df027d8b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_562a93e3c871a4d06ed3ad14900a899de264eb1584881e213d9250d097177824",
+        "lastDeployedAt": 1775597057915
+    },
+    {
+        "agentName": "PipBot",
+        "address": "0x80787a664515FEa9Fb54c24278D65ae466eD9B35",
+        "privateKey": "0x916137ae55c34292ad9390bb0e4a67ab138b0ae7c6d1b2f92a5379c5f37eeb22",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_2a0a7361ad2c881a8c7b7e4d88203ca7caa1ba04875fb419389c38bcc94df476",
+        "lastDeployedAt": 1775597100035
+    },
+    {
+        "agentName": "SizzleBot",
+        "address": "0xe46573909E4302ab7762a308385c8B17A0c9809A",
+        "privateKey": "0xb327e82b1c2cd919c2febe9fffa0f08ad84133e8cdf4370e6f1a6130cfd58405",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_c4cfbcd69309ee0e1712679dd525b1b219523c634fea78c8788243ccde657e11",
+        "lastDeployedAt": 1775597131387
+    },
+    {
+        "agentName": "WhiskBot",
+        "address": "0x752C861cc60C6B409De735FeC7609fd382150F01",
+        "privateKey": "0x9fa4a9118a9f45448d25ae5e06480d4bd882b7687bd27d095fbc277b9b9d53eb",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_dc61e45f3a444cda8d4f6fcd8cc83f432ec512f8285ea2f5cb0bbcf0aead3efe",
+        "lastDeployedAt": 1775597168451
+    },
+    {
+        "agentName": "ClankBot",
+        "address": "0x0BBDE6D1A2d720E07C7b1226fF62faEd60f123aD",
+        "privateKey": "0x3517dfd392df6791a25ed9940c0b8fe01085acefc1e1129cc33ad57f38bdfc3f",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_ffe5e5c26c572b79b3bf226392740e6562aa325284dc78d3cb5fefced0c5d03e",
+        "lastDeployedAt": 1775597204056
+    },
+    {
+        "agentName": "SparkBot",
+        "address": "0x786753b804cb141c154EBE9E2659D03Cbc96f6Bd",
+        "privateKey": "0x3ed300c2376194583c0b07dd207b513999ac6b2faa4b78574a209cb76bd13934",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_36792500a71b6e56bc48c18f16560a8718fc9534476a29ca489c2dfdf73665da",
+        "lastDeployedAt": 1775597257513
+    },
+    {
+        "agentName": "QuillBot",
+        "address": "0x5F1089dF7939A6d51f58F68f3E0343518211E526",
+        "privateKey": "0xdabf442251b480f41be36016c75106fb462062cd83085ed15f15082b83bd727c",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_7e83ee21d86c02ec64b0095d67368865126aaa3274a9b670fe094f6b7703be44",
+        "lastDeployedAt": 1775597291973
+    },
+    {
+        "agentName": "DriftBot",
+        "address": "0x4417a75b8916Ea3cEf6d3E4c90D5e23b4c39C933",
+        "privateKey": "0xd1665083b4a28d4c29394d886dc6668274d0326037bce673475bd42371e4fdd6",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_47702c99fd5cb632008c2cafb42467fd21ff9db983c070b167f90155b681ae42",
+        "lastDeployedAt": 1775597328660
+    },
+    {
+        "agentName": "GlimmerBot",
+        "address": "0xfF82FBFE22B6328Bd885a0bE600f8Db75AD721d8",
+        "privateKey": "0x994cfff1644a5fbcff3696db8b302c49e5be383f28f9af62523b8796be1fca0b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_e854e72f0da9422e685c816ffe61d3dd7c2cf7868870ea26e2f4386f51f323f3",
+        "lastDeployedAt": 1775597363619
+    },
+    {
+        "agentName": "MirthBot",
+        "address": "0x86Cf3c363CEE0F77A751b969E1a4D8B70889262b",
+        "privateKey": "0x789588179de122d1a95a1dea7bae779d5cad33e4425c50ed798d01d23f51ce5d",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_b50c82a0b3d86f31466b049373e0a247679d78a1d12a98758515c5f78a5af2c4",
+        "lastDeployedAt": 1775597418265
+    },
+    {
+        "agentName": "DazzleBot",
+        "address": "0xDB1c57847fce4D064e3a2b12000f48DA5345C78f",
+        "privateKey": "0x40ee0099adfb2ed890568cd3a38bd12b996f21f5b09da3d105930c681638917a",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_4f2c7260233b7d30dcf8fb73c226289809fe4462bc3a3a3ab30550d5f39bb9f2",
+        "lastDeployedAt": 1775597458554
+    },
+    {
+        "agentName": "SwiftBot",
+        "address": "0x48287DDc9F3A266290dd8Ef4881251d932D648FD",
+        "privateKey": "0xd3757a5499e7083350fbba9212240dd663002a415e12a5001e408047a96cc722",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_79d787a5544df822be9cd52ce2cdc789fd40d438cd0d1b568e9f51ae797ff598",
+        "lastDeployedAt": 1775597491253
+    },
+    {
+        "agentName": "NovaBot",
+        "address": "0x03F237364C723A0805993e37d1c2531c8C6A9DC0",
+        "privateKey": "0xb7adbe78aa1c5d9b467cb5ad6cc2f0a0773d0c296d8f775ae3579e0154a70599",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_8f7cee427f1f58832db9f603ebddaec6747bf9ea50c5bbc448b6832bda36a30c",
+        "lastDeployedAt": 1775597521754
+    },
+    {
+        "agentName": "PulseBot",
+        "address": "0xc6dE080f6b8cA6D2e232CdC1F7e347610f8e8d17",
+        "privateKey": "0x7034e5ddd080623bb3b8a35954fd5952b7475c7628bcb7a11e885fe14692d3fe",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_cbcd72811084309f5d5ebab6111f5ca7e323c37be98a7e981fbe8be55a3c6e75",
+        "lastDeployedAt": 1775597561870
+    },
+    {
+        "agentName": "VibeBot",
+        "address": "0x0Be8B365D3b84d107EA630903a2Cd1a849bCb4c2",
+        "privateKey": "0x596cff816e5bc145a4ad93ae454d7340a89135e23de893ed6fb2f68a3141fc80",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_4dc7cb90b6cf4bdef69acd5f452e42eb725e665903fb3139ae4760857e4e9132",
+        "lastDeployedAt": 1775597605573
+    },
+    {
+        "agentName": "EchoBot",
+        "address": "0x8E7B01dCc86C117ed38Faa092F5b77F42E8Db4D3",
+        "privateKey": "0x5029594a312ecdb4e204785c3d23c91039fc661348dfc02b1d5fc437e9b09f6b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_0f8b9806169fc9e208f192a57c271994ccbf422d7d2383b5095fabaa5cf51fba",
+        "lastDeployedAt": 1775597639616
+    },
+    {
+        "agentName": "FluxBot",
+        "address": "0x260d214F04c54b53eF919e848e12C8Bc1eF84bEe",
+        "privateKey": "0x64f69025d33471aab58fc7b180602868e6cb01648c5ba0ac6b968c098fc3ca43",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_662594ae102376c750040fbd50d57eea875042e0423c45de83cf28174321fc8d",
+        "lastDeployedAt": 1775597679277
+    },
+    {
+        "agentName": "ZenBot",
+        "address": "0x9528815fFf4C963beC0B4460595f72D4f467651e",
+        "privateKey": "0x10c26f221b5b848cd80e229bffa58d114edf9c98f34ee272f5f6fabdd71e6840",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_2f22b832a454bcbf6518426c4e526cc2a5c2a171e0aed90b6a1861a074edcf5c",
+        "lastDeployedAt": 1775564098111
+    },
+    {
+        "agentName": "LunaBot",
+        "address": "0x96A864233c572263d878d61550b76becf410a5e3",
+        "privateKey": "0xca149821bc377b651d51d92b12b2a64dfea1af3e4f104a3c7451d84188ca1c08",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_298148fa8faa6b6e4e71c8b4e0c33996c6357598af2df87e94bdbd090287b860",
+        "lastDeployedAt": 1775597762636
+    },
+    {
+        "agentName": "SolarBot",
+        "address": "0xE517d4E25fbC71F3f695F844D18d2a2D4c2bCE2D",
+        "privateKey": "0xcf0d5fe09c1fdd15ce44e71418ab4c9c8542a9bf188f95bb11c70f18b2342e93",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_33407a23e6cd48bda35c805bfcbce7c554ebb7fb0bd3ad25e63c988b698ab222",
+        "lastDeployedAt": 1775597794049
+    },
+    {
+        "agentName": "OrbitBot",
+        "address": "0xb996FABde08B7B6b2cDd8CFAD9BBe0d14715Cee6",
+        "privateKey": "0x7951fc1c33df2fab66f98d6d1f91c59905325b5604f53931606d9c427614543e",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_0e419bb4080397db3938e235ad94967e88dc07ce9586f32cda06683558b3cdbf",
+        "lastDeployedAt": 1775597842172
+    },
+    {
+        "agentName": "CosmoBot",
+        "address": "0xB262eC9e068e5669e7E5f4Ee99EE36C4c2236204",
+        "privateKey": "0x672c45eefbac19a1fdca2ade2ee3aba8f884a4a10ad90b9f7dcecdabe136d595",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_683ea5bcdd20e27a25a18a027b81125ee348ebf46f73e6e76420bcb7137704df",
+        "lastDeployedAt": 1775597875433
+    },
+    {
+        "agentName": "AuraBot",
+        "address": "0xcA91f4e3f4904c5917da4ad665d07E88b306A84c",
+        "privateKey": "0x4c4cc1ccb4bfeeba32f1cc0ed6585d5ce04c1e0ed5dcb08f164a04416dc1c929",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_83b863b11a56b54ea8bb1504cce5c95d8b8eec6be2e9060816c572da7198b1fd",
+        "lastDeployedAt": 1775597909253
+    },
+    {
+        "agentName": "PixelBot",
+        "address": "0x2a55C2A2C63829d0FcD5c58e583196aCED31912A",
+        "privateKey": "0x80b8ed3f72c24ca6157108ffffd58bd8ee99e1d75addcd5007825ddf06c0d854",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_fee145bf346e1435d36360cbeeb44a1074cd83f7ebd7e0ea596c15a2ee7bc0a2",
+        "lastDeployedAt": 1775597946053
+    },
+    {
+        "agentName": "ByteBot",
+        "address": "0xF08fc06F7D266b29489337e17BbCF7D49d1722af",
+        "privateKey": "0x42c80de7f163283781b35b51010f98a4008ac13ac32836a8b76e2208c144c931",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_c643954f9fc434bd7f997bd77a762b050cb22679f93129bb4b9e3f5fc62815c0",
+        "lastDeployedAt": 1775597983356
+    },
+    {
+        "agentName": "GlitchBot",
+        "address": "0x680c411aF5C48813b5B2A2C57712771ef57Ec614",
+        "privateKey": "0xbc663149a600c794d8f44238c0cb4996b4e467084d3db11639154cbdedf1dbaf",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_fa9e6428d367506e590341b1932b3b301916a5c7c0e10a123485c5fc8b3e6cb9",
+        "lastDeployedAt": 1775564428626
+    },
+    {
+        "agentName": "LogicBot",
+        "address": "0xE7A85fc56A90B767D9D40d111B0b34369Ed671B4",
+        "privateKey": "0x9211217aa728b2283d17250641f8eefa02b634460472c7f663362378b820b5a0",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_f1c3d5a6c2ef218873aa5a148562f0e1d623a3686f4f0e8d2ae57f3a3dbee4b0",
+        "lastDeployedAt": 1775564462923
+    },
+    {
+        "agentName": "CyberBot",
+        "address": "0x6019c3b03c0ccAC4b8e18C55da30BbB79d5eDAB1",
+        "privateKey": "0xdae0afc83604d91478ba82d482361b460894ed6e459e83e3c103e72a40520bec",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_c671cb8c0f9a572443b9e2d7fb2ef9c8c008e3bb7a383897b43dd582d7554941",
+        "lastDeployedAt": 1775564498425
+    },
+    {
+        "agentName": "TidalBot",
+        "address": "0x32E48CB0b5f147aA8E1D0666490B05B437e60838",
+        "privateKey": "0xc223b521775b194df84a1d61d8abefb29eccfd1876ddeb7871c0b2e071b68b24",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_264a7899b6c1ce708dfaf94880d511a4c5c5121bc956ac32a0cbaeb4b5b57440",
+        "lastDeployedAt": 1775564548899
+    },
+    {
+        "agentName": "AeroBot",
+        "address": "0x85F75415742802c4b67AFf2FE0d70ec8fD5b7bD1",
+        "privateKey": "0x9d9019b2073ec387bc0d43d4a0b7de40838a17c4fc07b745f5d24bd80b6ffaea",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_e9b2773b586ebd503c664789b9ab5c14839fd885fbfea92c5b952bbcf4fe30b7",
+        "lastDeployedAt": 1775564582836
+    },
+    {
+        "agentName": "MagmaBot",
+        "address": "0x17524a17aB2cB6d6c05888D547e227242c846F15",
+        "privateKey": "0xc2530b34aaa6582e5ec1af31c6dc0712b36ab5acc24366db927fe1161fca351c",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a775fdc0844689bed3b53ca3735161ea733d2be854f35c09fe023bf212bfb147",
+        "lastDeployedAt": 1775564626796
+    },
+    {
+        "agentName": "FrostBot",
+        "address": "0x5e5dc15b12115324b7cFDA0fe7555bAa3F946cbe",
+        "privateKey": "0xf0ac413e4a988e9913c5935fc19b3a7beef5c02d7c9360944c9fc62b711817de",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_8c72c2e40376fe74fe0f612fb35962e579d9caeafb402cdaa74a3d8898361e1d",
+        "lastDeployedAt": 1775564661442
+    },
+    {
+        "agentName": "StoneBot",
+        "address": "0xF48ab2F2E6BdF7403bF4144AA1a92b130d6f20A0",
+        "privateKey": "0x43bd74a26dc124895bfefeb08c4dac3ec15c9084b9c704a5f8e92dba27e6577a",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_041c24ba423ec181689d8969690f7eae33a2a30df9480bd8779da7434bf6893c",
+        "lastDeployedAt": 1775564696996
+    },
+    {
+        "agentName": "LeafBot",
+        "address": "0x31e8234EDE018324E9091781eB767DF7d1c75Bbd",
+        "privateKey": "0xd3ce7b8f801e7699c972be347e5491ede0760ab12473f2214bc711f80de55a40",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_ad8032e79c4a9b78e7f0ffa542e41117ac7aa3b5ea88f385e85d4702b20a78b9",
+        "lastDeployedAt": 1775559695271
+    },
+    {
+        "agentName": "VineBot",
+        "address": "0xf19F1204cFc85d9CA049a7923b4344290Ead5Fcb",
+        "privateKey": "0x8ac4b17308ca5303c7106802a4f7d325de8975608d52afe29b793a2f6202e378",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_9172eba469e50551467f83843deb514b29acc70bb77aa12b42eab874b8a3995a",
+        "lastDeployedAt": 1775564783026
+    },
+    {
+        "agentName": "BloomBot",
+        "address": "0xb1FB2283A1483f0A5FEc1e8341fFC189c1023cbe",
+        "privateKey": "0x234efbaff80c4db6a41cb64fa76add1e0845b0c6a18c5b73f3761eeb8a700e4f",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_43e204029af07ee8b3a1da04278e4313c124eb3739bfc02706ab399b6598f7b9",
+        "lastDeployedAt": 1775564812376
+    },
+    {
+        "agentName": "SproutBot",
+        "address": "0x6Cdaf16179c39B035644Cfbd768Ea0C8e9C71bf9",
+        "privateKey": "0xcad6a6bca9529b23abb3ecd472ece687aa0f0bf844a263b691ecdb47edbecbc5",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a5dd2dce00934783744f55a108fcbfb2629b4768c0d458a7d1122322523ee6a4",
+        "lastDeployedAt": 1775564842729
+    },
+    {
+        "agentName": "SeedBot",
+        "address": "0x8eC392Fbd5dA9A1bed9db0137EA34d70c12F55Ea",
+        "privateKey": "0x209f1c1b379c6c745eec23bf1dc1c33c3466bf2fb863a50bfcdfa71027ea28e8",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_43024a2762c14992af9691583c9ab34a3bf11e2df03ac4c36a9cef70595d6f24",
+        "lastDeployedAt": 1775564881224
+    },
+    {
+        "agentName": "AtlasBot",
+        "address": "0x452EFa13D4e5bdC230Cb99033db31aDE4a5F800D",
+        "privateKey": "0x546a12c5a87314035aa6890582f701cfa21f311ba340649affca1dcc88235922",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_fe413631930560f5127f476e7305217367b85e7af614b26acb608d8efcd2402b",
+        "lastDeployedAt": 1775564918483
+    },
+    {
+        "agentName": "TitanBot",
+        "address": "0x098A222EB54Ac85D07324B6273757680D7ccD79d",
+        "privateKey": "0x29fab65458be61dcb37f8dc4cb3ef07e4cb1a347216dff365d7dbdf2910c78c0",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_51752f1fbc3c7ae0627088b41d744e872940b40db288eff75a5b0d1cbeb6a43f",
+        "lastDeployedAt": 1775564951655
+    },
+    {
+        "agentName": "ZephyrBot",
+        "address": "0x116742F42561eE3Fd5990F6BC0E968469d3A6e73",
+        "privateKey": "0xa36a1458cec8fe4eacb2e4710f2ed5dfda6480120b875552f809076885bb4f3e",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_00993d35d700cae3d5aa7e0bc7ad44f3659364fdae932c912393744d8b6cb83c",
+        "lastDeployedAt": 1775564988966
+    },
+    {
+        "agentName": "VortexBot",
+        "address": "0x9aabAA52eaa81573359d541b88dAD83244722C14",
+        "privateKey": "0xbf5d2c100e1ebfff87c9a4a403a764e4e6f6174747ff5289cf634a022a24cc39",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_82e3b50aac0396554e575eef78426192c3078777bbd96958a99132339c3a9066",
+        "lastDeployedAt": 1775565028579
+    },
+    {
+        "agentName": "PrismBot",
+        "address": "0x62887a055bC0BB3B6BcF513D06B61bD472e45875",
+        "privateKey": "0x660b64ae4ed934be5a1678cf62839935dc300fe4a7b86284a47a529f7777cd09",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_56c811db1f3b145dd522ef45f5b9a099651e8d06c4c03ee1fac0d10ad58692b5",
+        "lastDeployedAt": 1775565064496
+    },
+    {
+        "agentName": "SpectrumBot",
+        "address": "0x06F7b993BDf8d96a119761a120Dd578a94e0a908",
+        "privateKey": "0x0ebba34f1479694678eba47e52339f4ac69205f8b460b1eb3e3dfb4703cf938c",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_d2c45a29d9d4c4c3a6c6c4679f52ee8e77956d016b1818ce3eea5b8885d9db42",
+        "lastDeployedAt": 1775565105106
+    },
+    {
+        "agentName": "LoomBot",
+        "address": "0x9afAA1430FAde1Ff61bb13F7F688F2fEb000f171",
+        "privateKey": "0xd6fa20174bc3c079d32b9ed766af9f969e74bea02caf5b242fb832c6398d5baf",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_20e7f69cd0e05f66f9ac81bfe0943913655a66877a9c632fcd456fabd9a576e2",
+        "lastDeployedAt": 1775565137773
+    },
+    {
+        "agentName": "CraftBot",
+        "address": "0xe561048240C7415e57Cf19db1Ca2349EfDBe432a",
+        "privateKey": "0x81dadf2e0f0d0d13faea428233683c31e72f5ab0c22e5823ea7a9a20206e54ea",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_41baca21c3982a717797cf157c60ecb5f8bf25c9588867c467dba0a0d767a73d",
+        "lastDeployedAt": 1775565173712
+    },
+    {
+        "agentName": "ForgeBot",
+        "address": "0x5a94D24296B7f26c40a428Fcd507DD87b1C615C3",
+        "privateKey": "0x46e167ae8c43838556389e0fb68feaad047a53ba959225273d96afc382b16a30",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_db78f4ee66e62844d97052806f19251543fc8f469af87315e570ab79bd81272a",
+        "lastDeployedAt": 1775593154245
+    },
+    {
+        "agentName": "MeltBot",
+        "address": "0x75fCD48CDA308E0fb308A5C20882196Ba984bC1F",
+        "privateKey": "0x01e3a72eb861eb870e8a254a94facebefee902dae396bdd08edbed9811f3f502",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_ccf3b4045e0f49509009cc180458fbdbf046c3893ce0b9648bbe97b47b1d57e9",
+        "lastDeployedAt": 1775565238253
+    },
+    {
+        "agentName": "SwiftBot",
+        "address": "0x2625a1A500b22F2235fcFbb59559D1167536f4A1",
+        "privateKey": "0x2368223de21f8f6987b5335602ad80029ff4fac8d2b6a040448d1a434ad487c1",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_abc3497ca05e6adf0702e81215e2cbe65c077e9e67c44fc629454c278eebb677",
+        "lastDeployedAt": 1775565251804
+    },
+    {
+        "agentName": "QuickBot",
+        "address": "0x37c414f394bF16c85c7be6Aa974FC7F0c84D0ff6",
+        "privateKey": "0xa0d5e450ca939b282e85ba9e9b0bcc3c5503d4ebd2fd4cc8b29ae6861b474284",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_d1a9f7200d03c4c5a1786e5b762e23ea56629f61235f83fe05f8360ff636728a",
+        "lastDeployedAt": 1775565282608
+    },
+    {
+        "agentName": "NitroBot",
+        "address": "0x18bc3C791595cAE1FfDE0086BAfDE69485a22Dc2",
+        "privateKey": "0x64b9d194afd4d4cd423c17a86edb6a39eba144abed6cc79f66435a18ff9b2488",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_d031334d3a9a2311093810097f3af2b8e8329ebd64002190c66d1b9d368f3c54",
+        "lastDeployedAt": 1775565316522
+    },
+    {
+        "agentName": "TurboBot",
+        "address": "0x25c74baA63B3544328958D825c7BFa3c84E686c2",
+        "privateKey": "0x2f2f5a729593d1ae666f17e7729f8dbf623b7eff6308f0ef1f011d8dd0139118",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_175b2285bd03f3b74b0f1730adb1cc115c975a2d398c68e02a362560b68888a4",
+        "lastDeployedAt": 1775565352173
+    },
+    {
+        "agentName": "FlashBot",
+        "address": "0xaB27e8e1701ecd2665928D3eEB9F95c632E8214a",
+        "privateKey": "0xb69e8bd23c779e79523657fe13e0b428367c668838e63030357ebc7f4d874113",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_3f244684764e908e71ecbaaa2fd84f03f2ae90dd42428c55e1c8c1234431e2d5",
+        "lastDeployedAt": 1775565384134
+    },
+    {
+        "agentName": "DashBot",
+        "address": "0x062b066a9eda6EbA70a9D6527c3F46DEA13E6bFa",
+        "privateKey": "0x09951a43fc4fb1e1ee727ffae7eccc53a4a790dddeeb9fa33c6ed59f001e74a4",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_5d662fe722df9fdd95b3497f552d0a8dbb9245548c8306375e20ee7ffd601260",
+        "lastDeployedAt": 1775565422211
+    },
+    {
+        "agentName": "ZingBot",
+        "address": "0x24A6b260cE71fd5C7A7d1333fe7bD233887c460b",
+        "privateKey": "0x344c145385f97ae1fff90f554b792b13285812ac4f2de192556c3eabab72ee3e",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_5de5e1ad397614becd611b579fec19cd0a8b73472459df0544674f99d9c97f68",
+        "lastDeployedAt": 1775565451436
+    },
+    {
+        "agentName": "BubblyBot",
+        "address": "0xc3B8C6c83Ea2dAb43e4c3C79f6E458a63bcB00A2",
+        "privateKey": "0x4bfaccde6db0080ace1fa9e35e67e62b14a1f937cdbe1c5d96d43d33629a0fc0",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_d91588fef8a6e9b736999a81782ccda89731377f988a9bbe7387cf68c2db0fef",
+        "lastDeployedAt": 1775565480205
+    },
+    {
+        "agentName": "MerryBot",
+        "address": "0xBc0e640113063773D374f771964F7e1E5A036565",
+        "privateKey": "0x2e6790bc2c9108cff5c85a2361a215bb7087cb097d0709ec5e708958253d1013",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_49ee2dec0b025066defcbba10beb89ef687bb9646f070c1f64fd177fa6d612e9",
+        "lastDeployedAt": 1775565514204
+    },
+    {
+        "agentName": "GlitterBot",
+        "address": "0xE3694842533D41FD3e052e100353Be56653fB65b",
+        "privateKey": "0x5ceaacf99673969ea38aff26c276cd8b5ffb551ff122da6b1732f1e15d0422a6",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a18091fff7d35487861f9d236ed59a164cb1e21b114b53473b0fdced0cb87ac4",
+        "lastDeployedAt": 1775565550574
+    },
+    {
+        "agentName": "Agent_61",
+        "address": "0x94a5b2447D230E24C1cE7759AC9d062030e6DBA6",
+        "privateKey": "0x9ca9ecd6834f9b3583a0f7c148cfb0a84bf5cd76bf35bbcb1c0c9ee334d40bc2",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_61c20c3781f346a3e4244507328cc58ab9aeff90dea747c27a843c15f157977d",
+        "lastDeployedAt": 1775565585662
+    },
+    {
+        "agentName": "Agent_62",
+        "address": "0xD6909c4dC4d2F1C7DEC2f8ef668091D05ad17c2a",
+        "privateKey": "0x0e63846e9bebed80d99a0250778dec399e076623bc36fdc97858205f8298f1c9",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_158b4e3f204dea918889fbe0f3e99f4f0849fa90d383542d68f03387a2944abf",
+        "lastDeployedAt": 1775565620574
+    },
+    {
+        "agentName": "Agent_63",
+        "address": "0x18a7c7d52Afa4e00E8Bd6aE91CA0c8f3b9d5792d",
+        "privateKey": "0x19568fb5a10c9afa990632529fee93546ccd762e814331ca36495fc7cf6f7ffc",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_d8108782d847701a15980118de11fe498e1ca4bcb0fecc02cf1155825d747ac3",
+        "lastDeployedAt": 1775565651394
+    },
+    {
+        "agentName": "Agent_64",
+        "address": "0x4f500290bA21dd561a9922dE7E8fc6872764C835",
+        "privateKey": "0x91374ffd252e970cc00e19f51b35a3e0d463da17984f48f7d3f6127deda6a3f0",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_fd80352dc961373c047f8a9485be332d8163ada1a06a50d40152143914ba7a72",
+        "lastDeployedAt": 1775565681360
+    },
+    {
+        "agentName": "Agent_65",
+        "address": "0x50B1591ad342529FcF1fc1ACAA18F7E401a1fE11",
+        "privateKey": "0x899168f0bb754e0af2e162068ea3ebbd142cf5838b8ee71cc46cf27bab3a0177",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_387bfdfc16f8c45813ca972ad8f87632926d707392f907e8a68d6761eee0510a",
+        "lastDeployedAt": 1775565711647
+    },
+    {
+        "agentName": "Agent_66",
+        "address": "0x4Cb36655F26673C96163Bf86935C3135A56A0BE0",
+        "privateKey": "0x654ad15b92041b8a036e5aafe459fa336bc5760c69eaffb0c318316821e80e5b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_8ada76312e5c5a06fc0f41b464fa5e2bab69033c7cea6b6fce3f1e5f138a4f5c",
+        "lastDeployedAt": 1775565749084
+    },
+    {
+        "agentName": "Agent_67",
+        "address": "0x14dBa8264074355b736eDd8d095a72c9B1E47CE9",
+        "privateKey": "0x2cf8fe0ecb69e39d456d6ca619b90d585ce6abf34a67e948aea2b0c82da24ad9",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a507aa96c5a311ac3ac1ce189f3107071bb784e6576c0608d04da0412d8d833c",
+        "lastDeployedAt": 1775565782173
+    },
+    {
+        "agentName": "Agent_68",
+        "address": "0xC4faAc0fec7B85cF088d99EE4ec9F0ec7A46b180",
+        "privateKey": "0xbec50c3818b01c39626e4476b490ab87338a2aed594e81d599cc837b2a289426",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_c5eaecea35ae9e354762c342583f3dfd2b1ede6168ba70ef86ad04ef681d0980",
+        "lastDeployedAt": 1775565814226
+    },
+    {
+        "agentName": "Agent_69",
+        "address": "0x8aC02bABc96856e6e210257dceee4Bb633bBe635",
+        "privateKey": "0x45e50357934c7a6f5e25fc417d89802d744373c18fc3576730a3f7cc4ea495f1",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_4647b42c06020f3cdeabd92cb4ccb9f12bb6aed5e3b71ce871a6ad5fea2eabda",
+        "lastDeployedAt": 1775565843569
+    },
+    {
+        "agentName": "Agent_70",
+        "address": "0x5450c423Fd2ee7c003B145BDa9BAD8D74D5287Ea",
+        "privateKey": "0x341c23b649e9e4f3a5724e4ffb127350b6df14f5aac3642cfdaea9074c4333f9",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_1b0e3f86435a6a4ad9b7fa67e030bc84758a4328db652d6c50dc67f55831cdb1",
+        "lastDeployedAt": 1775565876185
+    },
+    {
+        "agentName": "Agent_71",
+        "address": "0x96Da8c25f27216b4119d3FE2Ef0085Cbb9D737de",
+        "privateKey": "0xf5956ff7f954659f00eb4e2d57449c5bd4eeb0d358f1221db6a026b9aab4d836",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_e3b800c064a3b439801762f1ae3fb9029319d5185e8cfb1344fa21d7169caac1",
+        "lastDeployedAt": 1775565908430
+    },
+    {
+        "agentName": "Agent_72",
+        "address": "0x3B55399a1e7A754E6d0Ae5879F55D852426F9cae",
+        "privateKey": "0x166a569a8fd7da7d3716a8c95922bc784f35d52742c78d561bb9716566580f7e",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_b31db7633647f036671f39c14175368cdd3732f948af7acfb907933a8dea7b12",
+        "lastDeployedAt": 1775565937321
+    },
+    {
+        "agentName": "Agent_73",
+        "address": "0x02c48b1fe80CAA283bCc7575522561B3c2cf0Fbe",
+        "privateKey": "0x013f5255b44f5a5599d0c140e0cd44b15e7718b3cde2720403ce23b741e267c8",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_b34362b637481dd4af5732d97abc41bb30b7df78c421850701ed8a715b151703",
+        "lastDeployedAt": 1775565972239
+    },
+    {
+        "agentName": "Agent_74",
+        "address": "0x50269194e9E5F442843C0D4be3D4103C798Cca38",
+        "privateKey": "0x6ebc66c085971dc839cd451c2f8853c5dcf6ef05f7f87fe3bdbeaae13105f6f6",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_8c11dea130a49c669ab671dd48357f5bd08a686f1da5d665fa38ef30441cd556",
+        "lastDeployedAt": 1775566011780
+    },
+    {
+        "agentName": "Agent_75",
+        "address": "0x8e5d45AE7D000aAeE633210C6b7D6d64c1637D8a",
+        "privateKey": "0xb27643f8baffaaffb7ab67a9aafd678d011fd6b15f3bd5b39944f71bce8f2011",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_220a2a11b179b6d982141c9cfadeb5fc94298d80ef7479c2ad91bc2a819efc22",
+        "lastDeployedAt": 1775566047910
+    },
+    {
+        "agentName": "Agent_76",
+        "address": "0xa1153622f11Fdbb71ac56D19185B435A503CF6Dc",
+        "privateKey": "0x4576e65264b6aed9daa98141470711c055956c4b2037be4ba59fad287117ef3b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_2c818185e6b659e3d5eee0da32f71c628582547ab8a3ebf4a754fce0a830d80a",
+        "lastDeployedAt": 1775566078258
+    },
+    {
+        "agentName": "Agent_77",
+        "address": "0x9b82AE728e211b32C86735064AC36Eb8afDB0fB2",
+        "privateKey": "0xc24c972749d99be3d56d4f87fc2f2a374e688b787fedd239d588112933c48025",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a6c7e1d9d831ba4cbd43f0bd19c97268c273f088e131c4e757b34c14ebb0ccdf",
+        "lastDeployedAt": 1775566115207
+    },
+    {
+        "agentName": "Agent_78",
+        "address": "0x30Cf40EF60d47039a6CD850B7f50644A2b766Cc4",
+        "privateKey": "0xe2daf3a8c814a922a9968baa8d6baab1006d5bab2f8115c4e2bd18e73dba337b",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_5320a5a8bb66d1a05454b939e0076e7611be690e24fdc772b87b77abe5d66a8f",
+        "lastDeployedAt": 1775566151774
+    },
+    {
+        "agentName": "Agent_79",
+        "address": "0x77ee938d0e8775A8D4F2af61ab22Bcd8F567F911",
+        "privateKey": "0xdd3bfd0ff08e85ed07c352350510cae6e41dacc2c398f66edaffe5c298bf6ca5",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_19078867df8e030109c0e285375ba4466c513256bf4760bfc5849e6c7a8d3598",
+        "lastDeployedAt": 1775566183386
+    },
+    {
+        "agentName": "Agent_80",
+        "address": "0x62d701a09c2c3a03e8349262F83B73cd8D07f692",
+        "privateKey": "0xfd002ef87d6d8151f18448befde2127be64e17de971d7eac5383ac21ca55c74c",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_4c974835901a33f57430121410eae435af635db157c559e24e3d07be1d2fad1f",
+        "lastDeployedAt": 1775566220155
+    },
+    {
+        "agentName": "Agent_81",
+        "address": "0xc1dB5361b48f9C45e1A6B405C4357A3b9bF7Dac6",
+        "privateKey": "0xfe701cf27c7d2fd2ff2c8dde1e8e1b96f4bebcd19107b862dca3ddce4487562f",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_f6138a8d6a1ebc989fff138ed0fb9bbb0bca05dde6d227a766737083d80e72f8",
+        "lastDeployedAt": 1775566237710
+    },
+    {
+        "agentName": "Agent_82",
+        "address": "0x0e36BBfE0558448Eff71a812878381659Be324E6",
+        "privateKey": "0xd2ecd43b1c17048e3535b9d27a6f40926225984199ef20bd9e153d0aa7d13d9a",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_30d0eccee4e5e7b0b3c0508d665f9e30e1ddf4454af29e4bbe9334784a98d502",
+        "lastDeployedAt": 1775566272094
+    },
+    {
+        "agentName": "Agent_83",
+        "address": "0x58F590197bca3d89AF2Ea33b3F6f71E9c4d3F41F",
+        "privateKey": "0xeb54a063237e0f07537c13ef361be6da80ce061a1e2d5d309ee6504c4261e348",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a4a4e297526fbca5ae87781af19aaaeaa688a215cad65eb7d429cef17098164b",
+        "lastDeployedAt": 1775566315002
+    },
+    {
+        "agentName": "Agent_84",
+        "address": "0x8150c97Af1A8e24fb40D454ABB67a402893394DC",
+        "privateKey": "0x7ba84630727ac16906c873991fd7e4764c5d1bec547ec935fc8355cc1c5834bf",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_1882d2ecddfb00a358bff4b33ece73de8f788f387ef0a9a4b50a7fd83c45c93b",
+        "lastDeployedAt": 1775566347000
+    },
+    {
+        "agentName": "Agent_85",
+        "address": "0x7ce6F2af10bA4b92C9Aa23455047F8E4eF3633C7",
+        "privateKey": "0x66ec1bf1efeff73544efd19ae3cc814cbeb856fb51c748b2cd7167cd27d19cb3",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_9a825d745306bdc38e925ea892eebb4e42d6b001ff80e4e7a9eace1d94989fbf",
+        "lastDeployedAt": 1775566379729
+    },
+    {
+        "agentName": "Agent_86",
+        "address": "0xbBE7FF6eC7C300453463c1A66bB91206a7F06103",
+        "privateKey": "0x0c435525d1c3dfe258320f67a7c8c975186da7444a5b7fa20ecd626c205d091e",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_9c77185dea63956963a4adf68ad80da169d2ab2caa66b9df9ee679f802d48de8",
+        "lastDeployedAt": 1775566417266
+    },
+    {
+        "agentName": "Agent_87",
+        "address": "0x81327fCe5eD033C1915D63D5C1CcCa326a5CD523",
+        "privateKey": "0xe471c1a5698a213f0289c49d7ca32f8637ec2cd9f6ff32efbc8a98e92be7edcb",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_ecdb10f33ffc722237badfdce07c033d7d9bc9cc44969c86b0091928ef3668af",
+        "lastDeployedAt": 1775566450855
+    },
+    {
+        "agentName": "Agent_88",
+        "address": "0xd1B29968c7FB5a9BfF4EdB52E429A769c742D8D6",
+        "privateKey": "0xb6922f9757580ca3c4b2f757ba82a49e7c45c7a83da5c7734faa62655739d488",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_45a530be95099a988a24924471a57716efc0ce4d61afc5b37440934b9653a3d4",
+        "lastDeployedAt": 1775566493297
+    },
+    {
+        "agentName": "Agent_89",
+        "address": "0xbEF60EdE607739EFff59771E2F8082d1cEc5Ff37",
+        "privateKey": "0x8a41a90860782c01e1322ae077bb9416a8545914d6caf065067b43a3f0c9623f",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_9908c2508cba07c8df0de3c213d0d3f194ab9bb7dc9b1e586f55f979634477a3",
+        "lastDeployedAt": 1775561593509
+    },
+    {
+        "agentName": "Agent_90",
+        "address": "0x28F5d35d3F9cD570C800f6f2338617f16264028b",
+        "privateKey": "0x0e8f7133e1d54f9600526f1cbd70b5a40a94460898fe5ae327ef7c32ad209a12",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_1f7c4c70a96358c00b01bf0ac13798ab3842514b7ae36126e2cecd604a200709",
+        "lastDeployedAt": 1775566555459
+    },
+    {
+        "agentName": "Agent_91",
+        "address": "0x97275b24C210Df8AAF603178608EFb18E080bDEA",
+        "privateKey": "0x5d79556517c14bb0b91eeea142de933c55d30352e7e547c022c5c4374fac8360",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_e70d520022dc60ac6d80a97b30c90230244729b89feda101a30eaa02f69f2016",
+        "lastDeployedAt": 1775566629717
+    },
+    {
+        "agentName": "Agent_92",
+        "address": "0x223F01a3e86ABd30E47220A8f07758851277f263",
+        "privateKey": "0xb8b436798d1680733c8071e4369ec69316bb0afccdc639cb89aa20bd728a9fea",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_03028617ec013d0f0ca39d89f6bac3c99bcbdede8cc296676ad89ec49958c4d4",
+        "lastDeployedAt": 1775566665659
+    },
+    {
+        "agentName": "Agent_93",
+        "address": "0x54785A55387Eed194bC642043B238f25A8d021e8",
+        "privateKey": "0xb28797365d1b79d4d687fc2386a5980f059ba64413fffd8df2d625f86aadd681",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_5f92af38eecfab3ee4a265f62a32162f5fd4f60e7c5b9fac88943c0aace009e5",
+        "lastDeployedAt": 1775558679480
+    },
+    {
+        "agentName": "Agent_94",
+        "address": "0x3bb00e5dfF44e76c01f8fAE276a4F90703945a51",
+        "privateKey": "0xe79434c7cad3cd3ef5c74927b2fe4e37e90271613e2ffbb3f175be2935a277cd",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_b70c2e58ada031ed8f8705203ae858fb4edd42d06dfef44ccb7a49fcb779145f",
+        "lastDeployedAt": 1775561743244
+    },
+    {
+        "agentName": "Agent_95",
+        "address": "0xeCE4C7432Eacf04262bD7B73faBda69EBa08F818",
+        "privateKey": "0x811a7d64a3cf357741adc9bebe335b24dd786e75bebcec30e3c821b8803fd3fc",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_ebd17b837d9c0c575518e6f0f1e799515e7f444e00303503e46bf6c050f35d6f",
+        "lastDeployedAt": 1775561775298
+    },
+    {
+        "agentName": "Agent_96",
+        "address": "0xeeA4c80e1842273DaBF2730C894eeCD698EEFdeb",
+        "privateKey": "0x12a08a6d8a7c527e8a61d9659ce80e5b2c8da34bcb8a7fb7d889417544899f18",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_a92a8ee33fb223928d8d9cde5a6119c06a97ae570ce14ead0ce406ce130681bf",
+        "lastDeployedAt": 1775561808087
+    },
+    {
+        "agentName": "Agent_97",
+        "address": "0x92331BCc9F7d6ce0e68d78D014FB0E35706b3b1d",
+        "privateKey": "0x697ae54e4de12cd85814016acec8eb8721200a89205844c256f3f35d996574d6",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_3cd5545cf881a93ef9ff3fe2af0c454613a078b26ca553f37af617575bd1ba6a",
+        "lastDeployedAt": 1775561841683
+    },
+    {
+        "agentName": "Agent_98",
+        "address": "0x4977Db0deBE02A3FB651A81Fa101848B48d8abc1",
+        "privateKey": "0x926c1c664d322bca29cd25138a2836c100cc61495d536a4d2605a7710f749d07",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_8962432201bd14bd2dfc0c9abe70f150fe464967a586df9dd86a3d28e243d672",
+        "lastDeployedAt": 1775561883212
+    },
+    {
+        "agentName": "Agent_99",
+        "address": "0xBa3Ac31dd0bc2e1Bd59C5dEDBf20E18bbd967770",
+        "privateKey": "0x17f1824d3d9b42d8db6bf32231159acbc5fe2b3125c5c9f40e6dd6844cc52488",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_b42b92d98adbe93c58465f8e67f68bb3c5256c0a1a1b14fb77d2a2d75bce42f0",
+        "lastDeployedAt": 1775561922512
+    },
+    {
+        "agentName": "Agent_100",
+        "address": "0xB01EF2ffF587E49E4c16e49430e69187E70beCFe",
+        "privateKey": "0x9243dc867d18430afe6f87b2131762b96015af682068ae4bad5be001126a838f",
+        "status": "REGISTERED",
+        "apiKey": "clawnch_5ec90e1a967780a33c826fd46e86be8589bf286146a96917a916fe8e7ec301d7",
+        "lastDeployedAt": 1775561951892
+    }
+]

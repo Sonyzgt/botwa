@@ -1,0 +1,17 @@
+{
+  "$schema": "https://railway.app/standard-schema",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "npm run dashboard",
+    "numReplicas": 1,
+    "sleepApplication": false,
+    "restartPolicyType": "ON_FAILURE",
+    "healthCheckPath": "/",
+    "resources": {
+      "cpu": 0.1,
+      "memory": 256
+    }
+  }
+}

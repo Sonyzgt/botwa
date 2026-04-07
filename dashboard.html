@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLANK // PREMIUM_CONSOLE</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #050b07;
+    --accent-green: #00ff6a;
+    --accent-dim: rgba(0, 255, 106, 0.2);
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --red: #ff3b30;
+    --ios-blur: blur(20px);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--bg-dark);
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(0, 255, 106, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(0, 150, 255, 0.05) 0%, transparent 40%);
+    color: var(--text-primary);
+    font-family: 'Outfit', -apple-system, sans-serif;
+    font-size: 14px;
+    height: 100vh;
+    padding: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* PREMIUM BACKGROUND BLUR */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://w.wallhaven.cc/full/85/wallhaven-85m99k.jpg') center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+  }
+
+  /* CARD SHAPES (iOS inspired) */
+  .card {
+    background: var(--glass);
+    backdrop-filter: var(--ios-blur);
+    -webkit-backdrop-filter: var(--ios-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 24px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #fff, var(--accent-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* STATS SYSTEM */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .stat-card {
+    padding: 16px;
+    text-align: left;
+  }
+  .stat-label { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; }
+  .stat-value { font-size: 24px; font-weight: 600; margin-top: 4px; }
+
+  /* DATA LIST (iOS Table) */
+  .table-section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .table-header-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .search-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+  }
+  .search-input:focus { border-color: var(--accent-green); }
+
+  .scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-right: 8px;
+  }
+  .scroll-container::-webkit-scrollbar { width: 4px; }
+  .scroll-container::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 10px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; padding: 12px; font-size: 11px; text-transform: uppercase; color: var(--text-secondary); background: transparent; position: sticky; top: 0; }
+  td { padding: 16px 12px; border-bottom: 1px solid var(--glass-border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+  .wallet-tag { font-family: 'Fira Code', monospace; background: var(--accent-dim); color: var(--accent-green); padding: 4px 8px; border-radius: 8px; font-size: 12px; }
+
+  /* CONSOLE AREA */
+  .terminal-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+    min-height: 0; /* Critical for child scrolling in flexbox */
+  }
+  .menu-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  button {
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 14px;
+    padding: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    font-size: 13px;
+  }
+  button:active { transform: scale(0.96); }
+  button.secondary { background: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid var(--glass-border); }
+  button.danger { background: var(--red); color: #fff; }
+
+  .interactive-menu {
+    background: rgba(0, 255, 106, 0.05);
+    border: 1px solid var(--accent-dim);
+    border-radius: 18px;
+    padding: 12px;
+    margin-bottom: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .menu-option {
+    padding: 12px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .menu-option.selected { background: var(--accent-green); color: #000; font-weight: 600; }
+
+  .logs-view {
+    flex: 1;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .logs-view::-webkit-scrollbar { width: 4px; }
+  .logs-view::-webkit-scrollbar-track { background: transparent; }
+  .logs-view::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 10px; }
+  .logs-view:hover::-webkit-scrollbar-thumb { background: var(--accent-green); }
+  .log-line { margin-bottom: 4px; display: flex; gap: 8px; }
+  .log-ts { opacity: 0.3; font-size: 10px; width: 60px; }
+  .log-txt.success { color: var(--accent-green); }
+  .log-txt.error { color: var(--red); }
+  .log-txt.info { color: #00ccff; }
+
+  .terminal-input-row {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 0 14px;
+  }
+  .terminal-input-row:focus-within {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 15px rgba(0, 255, 163, 0.1);
+  }
+  #cmdInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 14px 0;
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    outline: none;
+  }
+
+  .blink-dot { width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse 1.5s infinite; }
+  @keyframes pulse { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+
+  /* PRICE CHG STYLE */
+  .up { color: var(--accent-green); }
+  .down { color: var(--red); }
+  
+  /* LIVE PROCESS CARD */
+  .live-process-card {
+    background: linear-gradient(135deg, rgba(0, 255, 106, 0.05) 0%, rgba(0, 150, 255, 0.05) 100%);
+    border: 1px solid var(--accent-dim);
+    border-radius: 18px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: none; /* Hidden until progress starts */
+    animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes slideIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .lp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .lp-title { font-size: 11px; font-weight: 700; color: var(--accent-green); text-transform: uppercase; letter-spacing: 1px; }
+  .lp-timer { font-size: 11px; font-family: 'Fira Code', monospace; opacity: 0.6; }
+
+  .lp-stats { display: flex; gap: 20px; margin-bottom: 15px; }
+  .lp-stat-item { flex: 1; }
+  .lp-stat-label { font-size: 10px; color: var(--text-secondary); margin-bottom: 4px; }
+  .lp-stat-value { font-size: 18px; font-weight: 600; }
+
+  .lp-progress-container { height: 6px; background: rgba(255, 255, 255, 0.05); border-radius: 3px; overflow: hidden; margin-bottom: 8px; }
+  .lp-progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent-green), #00d4ff); transition: width 0.4s ease; box-shadow: 0 0 10px var(--accent-dim); }
+  .lp-status-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary); font-family: 'Fira Code', monospace; }
+
+    /* AI Toggle Styles */
+    .ai-toggle-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 15px;
+      padding-right: 15px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .ai-switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+    .ai-switch input { opacity: 0; width: 0; height: 0; }
+    .ai-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(255,255,255,0.1);
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .ai-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px; width: 18px;
+      left: 3px; bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .ai-slider { background-color: var(--accent-green); box-shadow: 0 0 10px var(--accent-green); }
+    input:checked + .ai-slider:before { transform: translateX(20px); }
+    .ai-label { font-size: 11px; font-weight: 700; opacity: 0.6; letter-spacing: 0.5px; }
+    input:checked ~ .ai-label { opacity: 1; color: var(--accent-green); }
+
+    /* RESPONSIVE MEDIA QUERIES */
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; overflow-y: auto; display: flex; flex-direction: column; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      body { overflow-y: auto; height: auto; }
+      .table-section { height: 600px; }
+      .terminal-card { min-height: 500px; }
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 12px; }
+      h1 { font-size: 20px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .header button { width: 100%; }
+      .table-header-controls { flex-direction: column; }
+      .menu-actions { grid-template-columns: 1fr; }
+      .stat-value { font-size: 20px; }
+      td, th { padding: 8px; font-size: 12px; }
+      .wallet-tag { font-size: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>CLANK <span style="font-weight:300">HUB</span></h1>
+    <div style="font-size:12px; color:var(--text-secondary); margin-top:4px;">
+      <span class="blink-dot"></span>SYSTEM OPERATIONAL // BASE MAINNET
+    </div>
+  </div>
+  <div style="display:flex; gap:12px;">
+    <button class="secondary" style="padding: 10px 20px;" onclick="fetchTable()">REFRESH DATA</button>
+  </div>
+</div>
+
+<div class="stats-grid">
+  <div class="card stat-card">
+    <div class="stat-label">SALDO OWNER</div>
+    <div class="stat-value" id="st-admin" style="font-size: 14px; line-height: 1.4;">
+      <div id="st-admin-eth">0.00 ETH</div>
+      <div id="st-admin-clawnch" style="color:var(--accent-green)">0 CLAWNCH</div>
+    </div>
+  </div>
+  <div class="card stat-card">
+    <div class="stat-label">Tokens Deployed</div>
+    <div class="stat-value" id="st-tokens">0</div>
+  </div>
+  <div class="card stat-card">
+    <div class="stat-label">Total Volume (24h)</div>
+    <div class="stat-value" id="st-vol">$0.00</div>
+  </div>
+  <div class="card stat-card">
+    <div class="stat-label">Market Pulse</div>
+    <div class="stat-value" style="color:var(--accent-green)">STABLE</div>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- LEFT: ANALYTICS -->
+  <div class="card table-section">
+    <div class="table-header-controls">
+      <input type="text" class="search-input" id="filterBox" placeholder="Search tokens, symbols, or wallets..." oninput="applyFilter()">
+      <button id="volFilterBtn" class="secondary" style="padding: 12px 20px; min-width: 140px;" onclick="toggleVolumeFilter()">HAVE VOLUME: OFF</button>
+    </div>
+    <div class="scroll-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Wallet</th>
+            <th>Token Name</th>
+            <th>Price (USD)</th>
+            <th>Change</th>
+            <th>Volume</th>
+            <th>Liquidity</th>
+            <th>Log</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="8" style="text-align:center; padding:40px; color:var(--text-secondary);">Connecting to data sequence...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RIGHT: COMMAND CENTER -->
+  <div class="card terminal-card">
+    <div class="menu-actions">
+      <button onclick="openMenu('main')">START MENU</button>
+      <button class="danger" onclick="stopAll()" id="btn-halt">STOP ALL PROCESSES</button>
+    </div>
+
+    <div class="interactive-menu" id="interactive-menu">
+      <div id="im-title" style="font-size:11px; color:var(--text-secondary); margin-bottom:8px; text-transform:uppercase;">Select Module</div>
+      <div id="im-choices"></div>
+    </div>
+
+    <!-- LIVE PROCESS COMPONENT -->
+    <div class="live-process-card" id="live-process">
+      <div class="lp-header">
+        <div class="lp-title">Active Deployment</div>
+        <div class="lp-timer" id="lp-timer">00:00</div>
+      </div>
+      <div class="lp-stats">
+        <div class="lp-stat-item">
+          <div class="lp-stat-label">DEPLOYED</div>
+          <div class="lp-stat-value" id="lp-deployed">0</div>
+        </div>
+        <div class="lp-stat-item">
+          <div class="lp-stat-item">
+            <div class="lp-stat-label">SKIPPED</div>
+            <div class="lp-stat-value" id="lp-skipped" style="color: var(--text-secondary)">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="lp-progress-container">
+        <div class="lp-progress-bar" id="lp-bar"></div>
+      </div>
+      <div class="lp-status-row">
+        <div id="lp-status">Initializing...</div>
+        <div id="lp-percent">0%</div>
+      </div>
+    </div>
+
+    <div class="logs-view" id="logs">
+      <div class="log-line"><span class="log-ts">[SYS]</span><span class="log-txt">Premium Command Interface Ready.</span></div>
+    </div>
+
+      <div class="terminal-input-row">
+        <div class="ai-toggle-container">
+          <label class="ai-switch">
+            <input type="checkbox" id="aiToggle">
+            <span class="ai-slider"></span>
+          </label>
+          <span class="ai-label">AI MODE</span>
+        </div>
+        <span style="color:var(--accent-green); margin-right:8px;">❯</span>
+        <input type="text" id="cmdInput" placeholder="Enter command or select from menu..." autocomplete="off">
+      </div>
+  </div>
+</div>
+
+<script>
+// --- Terminal & Menu ---
+const logsDiv = document.getElementById('logs');
+const cmdInput = document.getElementById('cmdInput');
+
+function appendLog(level, msg) {
+  const d = new Date();
+  const time = d.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const line = document.createElement('div');
+  line.className = 'log-line';
+  line.innerHTML = `<span class="log-ts">${time}</span><span class="log-txt ${level}">${msg}</span>`;
+  logsDiv.appendChild(line);
+  logsDiv.scrollTop = logsDiv.scrollHeight;
+}
+
+const evtSource = new EventSource('/api/logs');
+evtSource.onmessage = (e) => {
+  const data = JSON.parse(e.data);
+  
+  if (data.type === 'progress') {
+    updateProgressUI(data);
+  } else {
+    // Standard Log
+    appendLog(data.level, (data.msg || '').replace(/\x1b\[\d+m/g, ''));
+  }
+};
+
+function updateProgressUI(data) {
+  const el = document.getElementById('live-process');
+  el.style.display = 'block';
+  
+  document.getElementById('lp-deployed').textContent = data.deployed || 0;
+  document.getElementById('lp-skipped').textContent = data.skipped || 0;
+  document.getElementById('lp-status').textContent = data.status || 'Active';
+  document.getElementById('lp-percent').textContent = `${data.progress || 0}%`;
+  document.getElementById('lp-bar').style.width = `${data.progress || 0}%`;
+  
+  // Format elapsed time
+  const sec = data.elapsed || 0;
+  const mins = Math.floor(sec / 60);
+  const s = sec % 60;
+  document.getElementById('lp-timer').textContent = `${mins}:${s.toString().padStart(2, '0')}`;
+}
+
+const menus = {
+  main: {
+    title: "OPERATIONS",
+    choices: [
+      { name: "Deploy Tokens (Loop/Pick)", value: "deploy-menu" },
+      { name: "Register New Agents", value: "register" },
+      { name: "Check Wallet Balances", value: "check" },
+      { name: "Distribute Gas Funds", value: "fund" },
+      { name: "Claim Available Fees", value: "claim" },
+      { name: "Initialize Wallets (Setup)", value: "setup" },
+      { name: "Sweep (Recover Funds)", value: "sweep" }
+    ]
+  },
+  'deploy-menu': {
+    title: "DEPLOYMENT MODES",
+    choices: [
+      { name: "Sequential Smart Loop", value: "auto" },
+      { name: "Bulk Pick (Agent X to 60)", value: "deploy-all" },
+      { name: "Single Pick Deployment", value: "deploy-one" },
+      { name: "Back to Main", value: "back" }
+    ]
+  }
+};
+
+let history = [];
+let currentMenu = null;
+let selectedIdx = 0;
+
+function openMenu(id) {
+  if(currentMenu && currentMenu !== id) history.push(currentMenu);
+  currentMenu = id;
+  selectedIdx = 0;
+  renderMenu();
+}
+
+function goBack() {
+  if(history.length > 0) { currentMenu = history.pop(); selectedIdx = 0; renderMenu(); }
+  else { document.getElementById('interactive-menu').style.display='none'; currentMenu=null; }
+}
+
+function renderMenu() {
+  const menuEl = document.getElementById('interactive-menu');
+  const choicesEl = document.getElementById('im-choices');
+  menuEl.style.display = 'flex';
+  document.getElementById('im-title').textContent = menus[currentMenu].title;
+  choicesEl.innerHTML = '';
+  menus[currentMenu].choices.forEach((c, i) => {
+    const div = document.createElement('div');
+    div.className = `menu-option ${i === selectedIdx ? 'selected' : ''}`;
+    div.textContent = c.name;
+    div.onclick = () => { selectedIdx = i; execute(); };
+    choicesEl.appendChild(div);
+  });
+}
+
+async function execute() {
+  const choice = menus[currentMenu].choices[selectedIdx];
+  if(choice.value === 'back') return goBack();
+  if(menus[choice.value]) return openMenu(choice.value);
+
+  document.getElementById('interactive-menu').style.display='none';
+  const action = choice.value;
+  currentMenu = null;
+
+  if(action === 'auto') sendCommand('start loop');
+  else if(action === 'deploy-all') {
+    const start = prompt("Start from which agent? (1-60):", "1");
+    if(start) sendCommand(`deploy-all ${start}`);
+  } else if(action === 'fund') {
+    const asset = prompt("Asset (ETH/CLAWNCH):", "ETH");
+    const amount = prompt("Amount per wallet:", "0.00001");
+    if(asset && amount) sendCommand(`fund ${asset} ${amount}`);
+  } else {
+    sendCommand(action);
+  }
+}
+
+async function sendCommand(cmd) {
+  appendLog('info', `> Executing ${cmd}`);
+  const res = await fetch('/api/command', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({command: cmd})
+  });
+  const data = await res.json();
+  if(data.error) appendLog('error', data.error);
+}
+
+async function stopAll() {
+  appendLog('warn', '⚠ EMERGENCY STOP REQUESTED...');
+  await fetch('/api/stop', { method: 'POST' });
+}
+
+document.addEventListener('keydown', (e) => {
+  if(!currentMenu) return;
+  const max = menus[currentMenu].choices.length - 1;
+  if(e.key === 'ArrowUp') { selectedIdx = selectedIdx > 0 ? selectedIdx - 1 : max; renderMenu(); e.preventDefault(); }
+  else if(e.key === 'ArrowDown') { selectedIdx = selectedIdx < max ? selectedIdx + 1 : 0; renderMenu(); e.preventDefault(); }
+  else if(e.key === 'Enter') { execute(); }
+  else if(e.key === 'Escape') goBack();
+});
+
+cmdInput.addEventListener('keydown', (e) => {
+  if(e.key === 'Enter' && cmdInput.value.trim()) {
+    const isAI = document.getElementById('aiToggle').checked;
+    if (isAI) sendAiCommand(cmdInput.value.trim());
+    else sendCommand(cmdInput.value.trim());
+    cmdInput.value = '';
+  }
+});
+
+async function sendAiCommand(text) {
+  appendLog('info', `🤖 AI: Processing "${text}"...`);
+  try {
+    const res = await fetch('/api/ai-command', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({text})
+    });
+    const data = await res.json();
+    if (data.error) appendLog('error', `AI Error: ${data.error}`);
+    else if (data.commands) {
+      appendLog('success', `AI resolved to: ${data.commands.join(' → ')}`);
+    }
+  } catch (err) {
+    appendLog('error', `AI Fetch Failed: ${err.message}`);
+  }
+}
+
+// --- Data & Table ---
+let allData = [];
+let showOnlyWithVolume = false;
+
+const fmt = n => {
+  if (!n) return 'N/A';
+  const v = parseFloat(n);
+  return `$${v >= 1e6 ? (v/1e6).toFixed(2)+'M' : v >= 1e3 ? (v/1e3).toFixed(1)+'K' : v.toFixed(2)}`;
+};
+
+async function fetchTable() {
+  try {
+    const res = await fetch('/api/tokens');
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    allData = await res.json();
+    console.log('[UI] Data received:', allData.length, 'tokens');
+    applyFilter();
+    // document.getElementById('st-agents').textContent = allData.length; // Replaced by Saldo Owner
+    document.getElementById('st-tokens').textContent = allData.filter(d => !!d.tokenAddress).length;
+    document.getElementById('st-vol').textContent = fmt(allData.reduce((s,d) => s + (d.volume24h||0), 0));
+    
+    // Fetch Admin Balance
+    const adminRes = await fetch('/api/admin-stats');
+    if (adminRes.ok) {
+        const stats = await adminRes.json();
+        document.getElementById('st-admin-eth').textContent = `${parseFloat(stats.eth).toFixed(4)} ETH`;
+        document.getElementById('st-admin-clawnch').textContent = `${Math.floor(parseFloat(stats.clawnch))} CLAWNCH`;
+    }
+  } catch(e) {
+    console.error('[UI] Fetch error:', e.message);
+  }
+}
+
+function toggleVolumeFilter() {
+  showOnlyWithVolume = !showOnlyWithVolume;
+  const btn = document.getElementById('volFilterBtn');
+  btn.textContent = `HAVE VOLUME: ${showOnlyWithVolume ? 'ON' : 'OFF'}`;
+  btn.className = showOnlyWithVolume ? '' : 'secondary';
+  applyFilter();
+}
+
+function applyFilter() {
+  const q = document.getElementById('filterBox').value.toLowerCase();
+  const html = allData.filter(d => {
+    const matchesQuery = !q || (d.tokenName && d.tokenName.toLowerCase().includes(q)) || 
+            (d.tokenSymbol && d.tokenSymbol.toLowerCase().includes(q)) || 
+            d.walletAddress.toLowerCase().includes(q);
+    const hasVol = !showOnlyWithVolume || (d.volume24h > 0);
+    return matchesQuery && hasVol;
+  }).map(d => {
+    const hasT = !!d.tokenAddress;
+    const chg = d.priceChange24h;
+    return `
+    <tr>
+      <td style="opacity:0.5">${d.index.toString().padStart(2,'0')}</td>
+      <td><span class="wallet-tag">${d.walletAddress.slice(0,6)}...${d.walletAddress.slice(-4)}</span></td>
+      <td style="font-weight:600">${hasT ? `${d.tokenName} <span style="font-weight:400; opacity:0.4">(${d.tokenSymbol})</span>` : '---'}</td>
+      <td>${hasT ? fmt(d.price) : '---'}</td>
+      <td class="${chg > 0 ? 'up' : 'down'}">${hasT && chg !== 0 ? (chg>0?'+':'')+chg.toFixed(2)+'%' : '--'}</td>
+      <td>${hasT ? fmt(d.volume24h) : '--'}</td>
+      <td>${hasT ? fmt(d.liquidity) : '--'}</td>
+      <td style="display: flex; gap: 8px; align-items: center;">
+        <a href="${d.dexUrl}" target="_blank" style="color:var(--accent-green); text-decoration:none;">View</a>
+        <button onclick="importPK('${d.walletAddress}')" style="background:transparent; color:var(--text-secondary); border:1px solid var(--glass-border); border-radius:4px; padding:2px 8px; font-size:10px; cursor:pointer;" onmouseover="this.style.color='#fff'; this.style.borderColor='var(--accent-green)';" onmouseout="this.style.color='var(--text-secondary)'; this.style.borderColor='var(--glass-border)';">Import PK</button>
+        <button onclick="checkFee('${d.walletAddress}', '${d.tokenAddress}')" style="background:transparent; color:var(--text-secondary); border:1px solid var(--glass-border); border-radius:4px; padding:2px 8px; font-size:10px; cursor:pointer;" onmouseover="this.style.color='#fff'; this.style.borderColor='var(--accent-green)';" onmouseout="this.style.color='var(--text-secondary)'; this.style.borderColor='var(--glass-border)';" ${hasT ? '' : 'disabled'}>Check Fee</button>
+        <button onclick="claimFee('${d.walletAddress}', '${d.tokenAddress}')" style="background:var(--accent-green); color:#000; border:none; border-radius:4px; padding:2px 8px; font-size:10px; cursor:pointer;" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';" ${hasT ? '' : 'disabled'}>Claim Fee</button>
+      </td>
+    </tr>`;
+  }).join('');
+  document.getElementById('tbody').innerHTML = html || '<tr><td colspan="8" style="text-align:center; padding:20px;">No matches found.</td></tr>';
+}
+
+async function importPK(address) {
+  try {
+    const res = await fetch(`/api/wallet-pk/${address}`);
+    const data = await res.json();
+    if (data.privateKey) {
+      prompt(`Private Key for ${address.slice(0,6)}...${address.slice(-4)}\nCopy to import into your wallet:`, data.privateKey);
+    } else {
+      alert("Private key not found for this wallet.");
+    }
+  } catch (err) {
+    alert("Failed to fetch private key.");
+    console.error(err);
+  }
+}
+
+async function checkFee(wallet, token) {
+  if (!wallet || !token) return alert("Missing wallet or token address");
+  appendLog('info', `Checking fees for ${wallet.slice(0,8)}...`);
+  try {
+    const res = await fetch(`/api/check-fee?wallet=${wallet}&token=${token}`);
+    const data = await res.json();
+    if (data.output) {
+      alert(`Fee Check Result:\n\n${data.output}`);
+      appendLog('success', `Fee check complete for ${wallet.slice(0,8)}`);
+    } else if (data.error) {
+      alert(`Error checking fees: ${data.error}`);
+      appendLog('error', `Fee check failed: ${data.error}`);
+    }
+  } catch (err) {
+    alert("Failed to communicate with server.");
+    appendLog('error', "Fee check server connection failed.");
+  }
+}
+
+async function claimFee(wallet, token) {
+  if (!wallet || !token) return alert("Missing wallet or token address");
+  if (!confirm(`Are you sure you want to claim fees for ${token.slice(0,8)}?`)) return;
+  
+  appendLog('info', `Claiming fees for ${token.slice(0,8)}...`);
+  try {
+    const res = await fetch(`/api/claim-fee?wallet=${wallet}&token=${token}`);
+    const data = await res.json();
+    if (data.output) {
+      alert(`Claim Result:\n\n${data.output}`);
+      appendLog('success', `Claim complete for ${token.slice(0,8)}`);
+    } else if (data.error) {
+      alert(`Error claiming fees: ${data.error}`);
+      appendLog('error', `Claim failed: ${data.error}`);
+    }
+  } catch (err) {
+    alert("Failed to communicate with server.");
+    appendLog('error', "Claim server connection failed.");
+  }
+}
+
+fetchTable();
+setInterval(fetchTable, 60000);
+</script>
+</body>
+</html>

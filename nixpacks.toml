@@ -1,0 +1,9 @@
+[build]
+installCommands = ["npm install"]
+
+[start]
+command = "npm run dashboard"
+
+[variables]
+NODE_ENV = "production"
+NPM_CONFIG_PRODUCTION = "true"

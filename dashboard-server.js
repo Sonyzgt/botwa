@@ -358,7 +358,7 @@ const server = http.createServer(async (req, res) => {
     }
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 server.on('error', e => {
     if (e.code === 'EADDRINUSE') { console.error(`\n❌ Port ${PORT} in use.\n`); process.exit(1); }
 });

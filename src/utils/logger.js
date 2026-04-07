@@ -7,9 +7,11 @@ export const logEmitter = new EventEmitter();
 const spinnerFrames = ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 let spinnerIndex = 0;
 
+const isTTY = process.stdout.isTTY;
+
 const emitLog = (level, msg, coloredMsg) => {
     // Clear current professional block before logging
-    if (log.state && log.state.hasRendered) {
+    if (isTTY && log.state && log.state.hasRendered) {
         readline.moveCursor(process.stdout, 0, -log.state.lineCount);
         for (let i = 0; i < log.state.lineCount; i++) {
             readline.clearLine(process.stdout, 0);
@@ -19,8 +21,10 @@ const emitLog = (level, msg, coloredMsg) => {
         log.state.hasRendered = false;
     }
 
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
+    if (isTTY) {
+        process.stdout.clearLine(0);
+        process.stdout.cursorTo(0);
+    }
     console.log(coloredMsg);
     logEmitter.emit('log', { level, msg, timestamp: Date.now() });
 };
@@ -42,6 +46,13 @@ export const log = {
         
         // Emit to dashboard
         logEmitter.emit('progress', { ...data, elapsed });
+
+        // On non-TTY (Railway), we only log the status occasionally to avoid infinite list
+        if (!isTTY) {
+             // Optional: log status to Railway console every 10s or on big changes
+             // For now, we skip renderDeploy in non-TTY because dashboard handles it.
+             return;
+        }
         
         // Progress Bar Calculation
         const width = 30;
@@ -79,6 +90,7 @@ export const log = {
     },
 
     clear: () => {
+        if (!isTTY) return;
         if (log.state.hasRendered) {
             readline.moveCursor(process.stdout, 0, -log.state.lineCount);
             for (let i = 0; i < log.state.lineCount; i++) {

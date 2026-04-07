@@ -273,8 +273,8 @@ const server = http.createServer(async (req, res) => {
             const adminAddress = config.adminWallet || privateKeyToAccount(config.adminPrivateKey).address;
             logEmitter.emit('log', { level: 'info', msg: `Claiming fees for ${token.slice(0,8)}...` });
             
-            // Execute: clawncher fees claim <tokenAddress> --network mainnet --private-key <privateKey> --fee-owner <adminAddress>
-            const cmd = `clawncher fees claim ${token} --network mainnet --private-key ${w.privateKey} --fee-owner ${adminAddress}`;
+            // Execute with npx and rpc-url for Railway stability
+            const cmd = `npx clawncher fees claim ${token} --network mainnet --private-key ${w.privateKey} --fee-owner ${adminAddress} --rpc-url ${config.rpcUrl}`;
             const { stdout, stderr } = await execAsync(cmd);
             const output = (stdout + '\n' + stderr).trim();
             
@@ -338,7 +338,7 @@ const server = http.createServer(async (req, res) => {
 
             logEmitter.emit('log', { level: 'info', msg: `Checking fees for ${wallet.slice(0,8)} on ${token.slice(0,8)}...` });
             
-            const { stdout, stderr } = await execAsync(`clawncher fees check ${wallet} -t ${token}`);
+            const { stdout, stderr } = await execAsync(`npx clawncher fees check ${wallet} -t ${token} --rpc-url ${config.rpcUrl}`);
             const output = (stdout + '\n' + stderr).trim();
             
             res.writeHead(200); res.end(JSON.stringify({ output }));

@@ -18,6 +18,10 @@ import { privateKeyToAccount } from 'viem/accounts';
 import { logEmitter } from './src/utils/logger.js';
 import { readDeployedTokens } from './src/utils/csv.js';
 import { stopSignal } from './src/utils/stopSignal.js';
+import { initProxies } from './src/utils/proxyManager.js';
+
+// Initialize Proxies early to avoid dependency race condition
+initProxies();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const CSV_PATH = path.resolve(__dirname, 'deployed_tokens.csv');

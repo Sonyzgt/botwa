@@ -8,10 +8,11 @@ const ONE_HOUR = 3600000;
 
 export const initProxies = () => {
     proxies = loadProxies();
-    // Unique list of IPs so we don't spam the exact same IP with different credentials when rate-limited.
-    // But since the user might want all of them, or they provided 70, we'll keep all 70.
-    // However, if the user hits an IP rate limit, they should mark all proxies with that IP on cooldown.
-    log.info(`Proxy Manager Initialized: loaded ${proxies.length} proxies.`);
+    if (log && typeof log.info === 'function') {
+        log.info(`Proxy Manager Initialized: loaded ${proxies.length || 0} proxies.`);
+    } else {
+        console.log(`[Proxy] Initialized: loaded ${proxies.length || 0} proxies.`);
+    }
 };
 
 // Gets the base IP of a proxy (e.g., http://user:pass@12.34.56.78:8000 -> 12.34.56.78)
@@ -81,5 +82,5 @@ export const waitForAvailableProxy = async (deployState = null) => {
     }
 };
 
-// Initialize on load
-initProxies();
+// Export for manual initialization
+// Moved out of top-level to avoid circular dependency crash
